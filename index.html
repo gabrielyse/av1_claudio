@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resolução interativa dos exercícios de JavaScript da Prática 2DSM." />
+  <title>Prática 2DSM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Desenvolvimento de Sistemas</p>
+      <h1>Prática 2DSM</h1>
+    </div>
+    <span class="status">6 exercícios resolvidos</span>
+  </header>
+
+  <nav class="tabs" aria-label="Exercícios">
+    <button class="tab active" data-tab="1">01 <span>Fretes</span></button>
+    <button class="tab" data-tab="2">02 <span>Folha</span></button>
+    <button class="tab" data-tab="3">03 <span>Produção</span></button>
+    <button class="tab" data-tab="4">04 <span>Reservas</span></button>
+    <button class="tab" data-tab="5">05 <span>Treinos</span></button>
+    <button class="tab" data-tab="6">06 <span>Vendas</span></button>
+  </nav>
+
+  <main id="app" class="workspace"></main>
+
+  <template id="exercise-template">
+    <section class="exercise">
+      <div class="intro">
+        <div><p class="eyebrow exercise-number"></p><h2 class="exercise-title"></h2><p class="exercise-description"></p></div>
+        <button class="ghost clear-button" type="button">Limpar dados</button>
+      </div>
+      <div class="layout">
+        <div class="panel form-panel">
+          <div class="panel-heading"><div><p class="step">Entrada de dados</p><h3>Novo registro</h3></div><span class="counter">0 cadastrados</span></div>
+          <form class="record-form"></form>
+        </div>
+        <div class="right-column">
+          <section class="panel report"><div class="panel-heading"><div><p class="step">Atualização automática</p><h3>Relatório final</h3></div></div><div class="report-content empty">Cadastre o primeiro registro para gerar o relatório.</div></section>
+          <section class="panel records"><div class="panel-heading"><div><p class="step">Histórico</p><h3>Registros</h3></div></div><div class="records-content empty">Nenhum registro cadastrado.</div></section>
+        </div>
+      </div>
+    </section>
+  </template>
+  <script src="./script.js"></script>
+</body>
+</html>
+
